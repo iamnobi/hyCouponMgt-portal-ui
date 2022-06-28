@@ -1,0 +1,67 @@
+.theme--light.v-text-field--outline {
+  .v-menu__activator--active &,
+  &.menuable__content__active,
+  &.v-input--is-focused {
+    .v-input__slot {
+      border-color: #1976d2 !important;
+    }
+  }
+
+  &.error--text {
+    .v-input__slot {
+      border-color: #ff5252 !important;
+    }
+  }
+
+  &:not(.v-input--is-focused) {
+    .v-input__slot:hover {
+      border-color: rgba(0, 0, 0, 0.87) !important;
+    }
+  }
+
+  // ! comment out these lines can solve issue CORE-1095 but may cause some UI bugs (not sure)
+  // &.v-input--is-readonly:not(.v-input--is-focused),
+  // &.v-input--is-readonly {
+  //   .v-input__slot {
+  //     border-color: rgb(219, 219, 219) !important;
+  //   }
+  // }
+
+  .v-input__slot {
+    transition: border-color 0.3s ease;
+    border-color: rgba(166, 166, 166, 0.54) !important;
+  }
+}
+
+.v-table {
+  .v-text-field--outline .v-input__slot {
+    min-height: 40px !important;
+    .v-label {
+      font-size: 13px;
+    }
+  }
+  .v-text-field.v-text-field--solo {
+    .v-input__control {
+      min-height: auto;
+    }
+    &.v-input--is-readonly {
+      .v-input__control {
+        background: rgba(166, 166, 166, 0.4) !important;
+      }
+    }
+  }
+  .v-text-field--outline.v-text-field--single-line input {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .v-text-field.v-text-field--enclosed {
+    .v-input__append-inner {
+      margin-top: 6px;
+    }
+  }
+  .v-select__slot {
+    .v-label {
+      top: 8px;
+    }
+  }
+}

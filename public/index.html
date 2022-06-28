@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Directory Server</title>
+    <style>
+      .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 3px solid #fa5e55;
+        border-radius: 50%;
+        -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #fa5e55 transparent transparent transparent;
+      }
+      .lds-ring div:nth-child(1) {
+        -webkit-animation-delay: -0.45s;
+        animation-delay: -0.45s;
+      }
+      .lds-ring div:nth-child(2) {
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+      }
+      .lds-ring div:nth-child(3) {
+        -webkit-animation-delay: -0.15s;
+        animation-delay: -0.15s;
+      }
+      @-webkit-keyframes lds-ring {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes lds-ring {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script>
+      // 若網址不是 / 結尾，redirect 至 / 結尾的網址，相對路徑才會正確
+      if (!location.pathname.match(/\/$/)) {
+        location.pathname += '/';
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but ds doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong
+      >
+    </noscript>
+
+    <!-- if ie <= 10  hide this-->
+    <div id="app_hide">
+      <div id="app">
+        <!-- loading -->
+        <div
+          style="position: absolute;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);"
+        >
+          <div
+            style="display: -webkit-box;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;-webkit-box-align: center;align-items: center;"
+          >
+            <div
+              style="text-align: center; margin-top: 60px; margin-bottom: 30px;"
+            >
+              Directory Server Loading...
+            </div>
+            <!-- spinner -->
+            <div class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // polyfill for ie 6,7,8 有 indexOf 功能
+      if (!Array.prototype.indexOf) {
+        Array.prototype.indexOf = function(val) {
+          var value = this;
+          for (var i = 0; i < value.length; i++) {
+            if (value[i] == val) return i;
+          }
+          return -1;
+        };
+      }
+
+      (function BrowserType() {
+        var aKeys = ['MSIE', 'Edge', 'Firefox', 'Safari', 'Chrome', 'Opera'],
+          sUsrAg = navigator.userAgent,
+          nIdx = aKeys.length - 1;
+
+        for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+
+        if (aKeys[nIdx] != 'MSIE') {
+          return aKeys[nIdx];
+        }
+
+        if (aKeys[nIdx] == 'MSIE') {
+          //isIE end
+          var reIE = new RegExp('MSIE (\\d+\\.\\d+);');
+          reIE.test(sUsrAg);
+          var fIEVersion = parseFloat(RegExp['$1']);
+          if (sUsrAg.indexOf('MSIE 6.0') != -1) {
+            return 'IE6';
+          } else if (fIEVersion <= 10) {
+            // hide application and show prompt text under body
+            var body = document.getElementsByTagName('body')[0];
+            var element = document.createElement('h2');
+            var recommendBrowser = document.createTextNode(
+              '請使用 IE11 或 Chrome 50 或 Firefox 52 以上'
+            );
+            element.appendChild(recommendBrowser);
+            body.appendChild(element);
+
+            var app = document.getElementById('app_hide');
+            app.style.display = 'none';
+
+            return false;
+          } else if (sUsrAg.toLowerCase().match(/rv:([\d.]+)\) like gecko/)) {
+            return 'IE11';
+          } else {
+            return '0';
+          }
+        }
+      })();
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

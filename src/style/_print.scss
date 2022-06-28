@@ -1,0 +1,114 @@
+@page {
+  margin: 1cm; /*print邊界*/
+}
+
+@media print {
+  /* portrait styles */
+  .hiden-print,
+  .query-card,
+  .v-toolbar,
+  .v-navigation-drawer {
+    display: none !important;
+  }
+
+  .container {
+    padding: 0 !important;
+  }
+
+  .v-content {
+    padding: 12px !important;
+  }
+
+  .v-card {
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+
+  .theme--light.application {
+    background: #fff;
+  }
+
+  .statisticReportTable {
+    border: 1px solid #e0e0e0;
+  }
+
+  table.v-table thead th {
+    font-size: 11px !important;
+  }
+  table.v-table thead th,
+  table.v-table tbody td {
+    padding: 0 8px !important;
+    text-align: center;
+  }
+
+  .print-report {
+    &.mt-4 {
+      margin-top: 15px !important;
+      border-top: 1px solid #e0e0e0;
+    }
+  }
+
+  .statistcal-cardscheme {
+    &.mb-2 {
+      margin-bottom: 0px !important;
+    }
+
+    &.px-3 {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+    &.py-3 {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+
+    table.px-3 {
+      padding-left: 3px !important;
+      padding-right: 3px !important;
+    }
+
+    table td.py-3 {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+    }
+
+    .box_outline_bottom.font-18 {
+      font-size: 15px !important;
+    }
+  }
+
+  .print-statistical {
+    &.pt-3 {
+      padding-top: 0 !important;
+    }
+    &.mt-4 {
+      margin-top: 20px !important;
+    }
+  }
+  .print-authorization {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .print-authorization-title {
+    margin-top: 20px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .print-card-title.v-card__title {
+    padding-left: 0 !important;
+    padding-top: 3px !important;
+  }
+
+  .statistcal-cardscheme,
+  table {
+    page-break-after: always;
+  }
+}
+
+// 橫式
+@media print and (orientation: Landscape) {
+}
+
+// 直式
+@media print and (orientation: portrait) {
+}

@@ -1,0 +1,50 @@
+$file-upload-height: 46px;
+
+.file-upload {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.file-upload .file-select {
+  display: block;
+  cursor: pointer;
+  height: $file-upload-height;
+  line-height: $file-upload-height;
+  text-align: left;
+  background: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+.file-upload .file-select .file-select-button {
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  display: inline-block;
+  height: $file-upload-height;
+  line-height: $file-upload-height;
+}
+.file-upload .file-select .file-select-name {
+  line-height: $file-upload-height;
+  display: inline-block;
+  padding: 0 10px;
+  width: 80%;
+}
+
+.file-upload .file-select:hover .file-select-button {
+  background: #2e86d7;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.file-upload .file-select input[type='file'] {
+  z-index: 3;
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}

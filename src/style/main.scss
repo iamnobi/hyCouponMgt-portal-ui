@@ -1,0 +1,125 @@
+// set google font be a local file
+@import './fonts';
+
+/***  All files in the helper folder are modify plugin css   ***/
+// override plugin
+@import './helper/ctk-date-time-picker';
+
+// override vuerify
+@import './helper/vuetify_alert';
+@import './helper/vuetify_input_outline';
+@import './helper/vuetify_text_field';
+@import './helper/vuetify_select';
+
+// custom scss
+@import './uploadFile';
+@import './spacing';
+
+// print scss
+@import './print';
+
+// for IE10/IE11
+@import './modifyForIE11';
+
+// border-radius3 - border-radius5
+@for $i from 3 through 5 {
+  .border-radius#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+body {
+  font-family: 'Roboto', 'Microsoft JhengHei', 'sans-serif' !important;
+}
+
+.clickable-table {
+  max-height: 500px !important;
+  overflow: auto !important;
+}
+
+.flex-0-0-auto {
+  flex: 0 0 auto !important;
+}
+.d-flex .flex-0-0-auto {
+  flex: 0 0 auto !important;
+}
+
+.vertical-align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+// v-data-table scrolling
+.fixed-table-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.fixed-table-header .v-table__overflow {
+  table {
+    table-layout: fixed;
+    thead {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      position: absolute;
+      top: 0;
+      tr {
+        height: 50px;
+        background: #fff;
+        &.v-datatable__progress th {
+          border: none;
+        }
+        th {
+          height: 50px;
+          z-index: 2;
+          position: relative;
+          background: #fff;
+        }
+      }
+    }
+    tbody {
+      display: block;
+      max-height: 540px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-top: 50px;
+      tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+    }
+    tfoot tr td {
+      padding: 0;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+    }
+  }
+}
+
+.statistic-report-table table thead th {
+  white-space: initial !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.num-style {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.one-line {
+  white-space: nowrap;
+}
+
+.box_outline {
+  border: 1px solid #e0e0e0;
+}
+
+.box_outline_bottom {
+  border-bottom: 1px solid #e0e0e0;
+}

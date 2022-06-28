@@ -1,0 +1,878 @@
+{
+  "menu": {
+    "canSeePan": {
+      "title": "檢視明碼卡號",
+      "module": {
+        "canSeePan": "@:(menu.canSeePan.title)"
+      }
+    },
+    "dashboard": {
+      "title": "報表查詢",
+      "module": {
+        "report": "@:(menu.dashboard.title)"
+      }
+    },
+    "transaction": {
+      "title": "交易",
+      "sub": {
+        "records": "交易紀錄查詢",
+        "preqRecords": "PReq 紀錄查詢"
+      },
+      "module": {
+        "records": "@:(menu.transaction.title)｜@:(menu.transaction.sub.records)、@:(menu.transaction.sub.preqRecords)"
+      }
+    },
+    "acquirer": {
+      "title": "3DS Server",
+      "sub": {
+        "acquirerManage": "3DS Server 管理",
+        "3dsSdk": "3DS SDK 設定"
+      },
+      "module": {
+        "acquirer": "@:(menu.acquirer.title)｜@:(menu.acquirer.sub.acquirerManage)、@:(menu.acquirer.sub.3dsSdk)"
+      }
+    },
+    "issuer": {
+      "title": "發卡行",
+      "sub": {
+        "issuerManage": "發卡行管理"
+      },
+      "module": {
+        "issuerManage": "@:(menu.issuer.title)｜@:(menu.issuer.sub.issuerManage)"
+      }
+    },
+    "account": {
+      "title": "人員管理",
+      "sub": {
+        "groupPermission": "群組權限設定",
+        "userManage": "使用者管理",
+        "userUnLock": "使用者解鎖",
+        "passwordPrinciple": "密碼原則管理",
+        "auditLog": "操作紀錄"
+      },
+      "module": {
+        "userManage": "@:(menu.account.title)｜@:(menu.account.sub.groupPermission)、@:(menu.account.sub.userManage)",
+        "userUnLock": "@:(menu.account.title)｜@:(menu.account.sub.userUnLock)",
+        "passwordPrinciple": "@:(menu.account.title)｜@:(menu.account.sub.passwordPrinciple)",
+        "auditLog": "@:(menu.account.title)｜@:(menu.account.sub.auditLog)"
+      }
+    },
+    "systemSetting": {
+      "title": "系統設定",
+      "sub": {
+        "binRange": "BIN Range 管理",
+        "general": "基本設定",
+        "mcc": "MCC 管理"
+      },
+      "module": {
+        "binRange": "@:(menu.systemSetting.title)｜@:(menu.systemSetting.sub.binRange)",
+        "general": "@:(menu.systemSetting.title)｜@:(menu.systemSetting.sub.general)、@:(menu.systemSetting.sub.mcc)"
+      }
+    },
+    "certificate": {
+      "title": "憑證管理",
+      "sub": {
+        "ca": "CA 憑證",
+        "deviceInfo": "Device Info 憑證",
+        "ssl": "SSL 憑證"
+      },
+      "module": {
+        "certificate": "@:(menu.certificate.title)｜@:(menu.certificate.sub.ca)、@:(menu.certificate.sub.deviceInfo)、@:(menu.certificate.sub.ssl)"
+      }
+    },
+    "login": {
+      "title": "登入"
+    },
+    "logout": {
+      "title": "登出"
+    },
+    "other": {
+      "title": "其他",
+      "get_permission": "取得使用者權限",
+      "no_permission": "無功能存取權限",
+      "permissionException": "權限異常"
+    }
+  },
+  "common": {
+    "btn": {
+      "query": "搜尋",
+      "reset": "重置",
+      "edit": "編輯",
+      "save": "儲存",
+      "cancel": "取消",
+      "submit": "提交",
+      "upload": "上傳",
+      "download": "下載",
+      "import": "匯入",
+      "exportOnly": "匯出",
+      "exportSelect": "匯出選擇的",
+      "exportSelect_item": "個項目 | 個項目 | 個項目",
+      "exportAll": "全部匯出",
+      "close": "關閉",
+      "back": "返回"
+    },
+    "file": {
+      "label_uploadFile": "選擇檔案",
+      "hint_uploadFile": "請選擇上傳檔案",
+      "noFile": "未選擇任何檔案"
+    },
+    "table": {
+      "inquire": {
+        "prefix": "搜尋結果共",
+        "infix": "，已選擇",
+        "results": "個項目 | 個項目 | 個項目"
+      },
+      "timeRange": {
+        "prefix": "時間區間：",
+        "infix": "至",
+        "pastTime": "過去時間",
+        "currentTime": "現在時間"
+      },
+      "noData": "沒有任何項目"
+    },
+    "query": {
+      "bank": {
+        "title_bank": "選擇銀行機構",
+        "label_bank": "銀行名稱",
+        "label_institution": "機構名稱",
+        "hint_selectOneBank": "請選擇一家銀行",
+        "value_allBanks": "全體銀行",
+        "value_organization": "組織"
+      },
+      "acquirerBank": {
+        "title_bank": "選擇 3DSS Operator",
+        "label_bank": "3DSS Operator",
+        "hint_selectOneBank": "請選擇 3DSS Operator",
+        "value_allBanks": "All 3DSS Operators"
+      },
+      "timeRange": {
+        "title_timeRange": "選擇時間範圍",
+        "label_timeRange": "起始時間 - 結束時間",
+        "hint_endOutOfRange": "結束時間不可小於起始時間",
+        "shortcuts_today": "今日",
+        "shortcuts_yesterday": "昨日",
+        "shortcuts_thisWeek": "本週",
+        "shortcuts_lastWeek": "上週",
+        "shortcuts_thisMonth": "本月",
+        "shortcuts_lastMonth": "上個月"
+      },
+      "advanceSearch_show": "展開進階搜尋條件",
+      "advanceSearch_hide": "隱藏進階篩選條件"
+    }
+  },
+  "toolbar": {
+    "system": "DS",
+    "timeLeft": "剩餘登入時間",
+    "tip_loginExtend": "點擊以延長登入時間",
+    "personalSetting": {
+      "title": "個人設定",
+      "selection_profile": "個人資料",
+      "selection_changePassword": "變更密碼",
+      "selection_logout": "登出",
+      "language": {
+        "title": "語系"
+      },
+      "dialog_profile": {
+        "title": "個人資料",
+        "title_optionalItem": "選填項目：",
+        "label_userAccount": "使用者帳號",
+        "label_userName": "使用者姓名",
+        "label_email": "電子郵件",
+        "label_departmentCategory": "部門類別",
+        "label_phone": "電話號碼",
+        "label_extension": "分機"
+      },
+      "dialog_passwordChange": {
+        "title": "變更密碼",
+        "label_currentPassword": "現行密碼",
+        "label_newPassword": "新密碼",
+        "label_retypeNewPassword": "再次輸入新密碼",
+        "warning": "基於帳號安全性，請即刻變更密碼",
+        "prompt_title": "密碼須符合以下原則",
+        "prompt_minDuplicate": " | ，且不得重複於上次的密碼 | ，且不得重複於 {min} 代內的密碼",
+        "note_characters": "密碼長度介於 {min} 至 {max} 間",
+        "note_englishCharacters": "至少需包含 {min} 個英文字元 (至少 {uppercase} 個大寫字母，{lowercase} 個小寫字母)",
+        "note_numeric": "至少需包含 {min} 個數字",
+        "note_specialChar": "至少需包含 {min} 個特殊符號"
+      }
+    }
+  },
+  "page": {
+    "login": {
+      "title": "登入",
+      "subtitle": "DS 系統",
+      "rightsStatement": "Cherri Tech, Inc. | All rights reserved.",
+      "suggestion": "建議使用 Google Chrome 86或以上瀏覽器，以享最佳瀏覽體驗",
+      "form": {
+        "label_userAccount": "使用者帳號",
+        "label_password": "密碼",
+        "btn_login": "登入",
+        "btn_forgetPassword": "忘記密碼？",
+        "error_locked": "帳號已鎖定，請洽管理員",
+        "error_loginFailed": "帳號或密碼錯誤",
+        "error_noOwnGroup": "此帳號不屬於任何群組，請聯絡管理員",
+        "error_recaptchaTokenInvalid": "未通過 reCAPTCHA V2 驗證，請重新驗證或確認 www.google.com 連線 !"
+      },
+      "dialog_mfa": {
+        "title": "多重要素驗證 (MFA)",
+        "description": "為了提高安全性，我們必須進一步驗證您的身份",
+        "label_authenticationCode": "驗證碼",
+        "hint_authenticationCode": "已傳送 OTP 驗證碼到您的電子郵件中。",
+        "btn_resend": "重新發送",
+        "prompt": "未收到 OTP 驗證碼？請點選「重新發送」。"
+      },
+      "dialog_forgetPassword": {
+        "title": "忘記密碼",
+        "description": "請輸入使用者帳號，以協助您重新變更密碼",
+        "label_bankCode": "銀行代碼",
+        "label_userAccount": "使用者帳號",
+        "prompt": "請至郵箱收取EMail，點選郵件內連結以設定密碼。"
+      },
+      "dialog_passwordSetting": {
+        "title": "設定密碼",
+        "label_newPassword": "新密碼",
+        "label_retypeNewPassword": "再次輸入新密碼",
+        "prompt_title": "密碼須符合以下原則",
+        "prompt_minDuplicate": " | ，且不得重複於上次的密碼 | ，且不得重複於 {min} 代內的密碼",
+        "note_characters": "密碼長度介於 {min} 至 {max} 間",
+        "note_englishCharacters": "至少需包含 {min} 個英文字元 (至少 {uppercase} 個大寫字母，{lowercase} 個小寫字母)",
+        "note_numeric": "至少需包含 {min} 個數字",
+        "note_specialChar": "至少需包含 {min} 個特殊符號"
+      }
+    },
+    "noPermission": {
+      "message": "您沒有權限操作此功能"
+    },
+    "dashboard_report": {
+      "description": "交易統計報表",
+      "prompt": "設置搜尋條件並點擊搜尋",
+      "query": {
+        "title_timeRange": "選擇時間範圍",
+        "radio_daily": "日報表",
+        "radio_monthly": "月報表",
+        "label_timeRange_daily": "日期",
+        "label_timeRange_monthly": "月份",
+        "hint_timeRange": "請選擇時間範圍"
+      },
+      "daily": "日報表：",
+      "monthly": "月報表：",
+      "transactionStatic": {
+        "title": "交易狀態統計報表",
+        "formula_description": "3DS 2.0 計算公式:",
+        "formula1": "N-Rate = [(ARes=N or R) + (RReq=N or R)] / [(ARes=Y+N+A+U+R) + (RReq=Y+N+A+U+R)]",
+        "formula2": "U-Rate = [(ARes=U) + (RReq=U)] / [(ARes=Y+N+A+U+R) + (RReq=Y+N+A+U+R)]",
+        "th_bank": "銀行名稱",
+        "th_totalQty": "總交易量",
+        "th_statusY": "交易成功(Y)",
+        "th_statusN": "交易失敗(N)",
+        "th_reject": "交易拒絕(R)",
+        "th_exception": "系統異常(U)",
+        "th_uRate": "U-Rate",
+        "th_nRate": "N-Rate",
+        "tip_statusY": "ARes = Y or RReq = Y",
+        "tip_statusN": "ARes = N or RReq = N",
+        "tip_reject": "ARes = R",
+        "tip_abnormal": "ARes = U"
+      }
+    },
+    "transaction_records": {
+      "description": "查詢3D驗證交易、回報偽冒交易紀錄",
+      "prompt": "設置搜尋條件並點擊搜尋",
+      "query": {
+        "title_timeRange": "選擇時間範圍",
+        "title_pan": "輸入卡號",
+        "label_startDatetime": "起始時間",
+        "label_endDatetime": "結束時間",
+        "label_pan": "卡號",
+        "label_ares": "ARes",
+        "label_rres": "RRes",
+        "label_pares": "PARes",
+        "label_3dsServerTransID": "threeDSServerTransID",
+        "label_acsTransID": "acsTransID",
+        "label_dsTransID": "dsTransID",
+        "label_sdkTransID": "sdkTransID",
+        "caption": "使用以下的欄位搜尋，將會忽略其他的搜尋條件"
+      },
+      "3ds2Result": "3DS 2.0 搜尋結果({count})",
+      "records": {
+        "th_authenticationDate": "驗證時間",
+        "th_institutionName": "機構名稱",
+        "th_pan": "卡號",
+        "th_amount": "金額",
+        "th_currency": "貨幣",
+        "th_transactionResult": "交易結果",
+        "th_areqResult": "AReq 結果"
+      },
+      "3ds2Records": {
+        "title": "3DS 2.0 ",
+        "td_ares": "(ARes: {status})",
+        "td_rres": "(RRes: {status})",
+        "td_result_success": "成功",
+        "td_result_fail": "失敗"
+      },
+      "recordsExtend": {
+        "btn_transDetail": "詳細交易資料",
+        "th_none": "(無)",
+        "th_cardholderIp": "持卡人 IP",
+        "th_purchaseTime": "消費時間",
+        "th_merchantName": "商家名稱",
+        "th_merchantCountryCode": "商家國家代碼",
+        "th_challengeChannel": "驗證管道",
+        "th_deviceChannel": "裝置通道",
+        "th_ares": "ARes",
+        "th_rres": "RRes",
+        "th_encryptPan": "加密卡號",
+        "th_challengeResult": "Challenge 結果",
+        "th_createMillis": "交易日期(毫秒)",
+        "th_userAgent": "User-Agent",
+        "th_rbaDescription": "風險評估(RBA)說明"
+      },
+      "dialog_recordDetail": {
+        "description": "檢視交易紀錄詳細資訊",
+        "table_title": "詳細交易資訊",
+        "th_none": "(無)"
+      }
+    },
+    "transaction_preqRecords": {
+      "description": "查詢 Preparation Request Message (PReq) 紀錄",
+      "prompt": "設置搜尋條件並點擊搜尋",
+      "query": {
+        "title_timeRange": "選擇時間範圍",
+        "label_startDatetime": "起始時間",
+        "label_endDatetime": "結束時間"
+      },
+      "records": {
+        "th_preq": "PReq",
+        "th_pres": "PRes",
+        "th_3dssOperatorId": "3DS Server Operator ID",
+        "th_3dssEmvRefNumber": "3DS Server EMV Reference Number",
+        "th_3dssTransId": "3DS Server Trans ID",
+        "th_datetime": "時間",
+        "th_dsTransId": "DS Trans ID",
+        "th_serialNumber": "Serial Number",
+        "th_errorMsg": "錯誤訊息",
+        "tip_errorMsg": "PRes 回應錯誤"
+      }
+    },
+    "issuer_issuerManage": {
+      "description": "建立及管理發卡行",
+      "btn_createIssuer": "建立發卡行",
+      "issuerList": {
+        "title": "發卡行列表",
+        "th_issuerName": "發卡行名稱",
+        "th_issuerCode": "發卡行代碼",
+        "th_issuerAcsRefNumber": "ACS Reference Number",
+        "th_issuerAcsOperatorId": "ACS Operator ID",
+        "th_issuerEdit": "編輯",
+        "th_issuerDelete": "刪除"
+      },
+      "dialog_addIssuer": {
+        "title": "新增發卡行",
+        "label_issuerName": "發卡行名稱",
+        "label_issuerCode": "發卡行代碼",
+        "label_issuer3dsUrl": "3DS Method URL",
+        "label_issuerAcsUrl": "ACS URL",
+        "label_issuerAcsRefNumber": "ACS Reference Number",
+        "label_issuerAcsOperatorId": "ACS Operator ID"
+      },
+      "dialog_editIssuer": {
+        "title": "修改發卡行",
+        "label_issuerName": "發卡行名稱",
+        "label_issuerCode": "發卡行代碼",
+        "label_issuer3dsUrl": "3DS Method URL",
+        "label_issuerAcsUrl": "ACS URL",
+        "label_issuerAcsRefNumber": "ACS Reference Number",
+        "label_issuerAcsOperatorId": "ACS Operator ID"
+      }
+    },
+    "acquirer_acquirerManage": {
+      "description": "建立及管理 3DS Server",
+      "btn_createAcquirer": "建立 3DS Server",
+      "acquirerList": {
+        "title": "3DS Server 列表",
+        "th_acquirerName": "3DSS Operator 名稱",
+        "th_acquirer3dsRefNumber": "3DSS Reference Number",
+        "th_acquirer3dsOperatorID": "3DSS Operator ID",
+        "th_acquirerBins": "Acquirer BINs",
+        "th_acquirerEdit": "編輯",
+        "th_acquirerDelete": "刪除"
+      },
+      "btn_addAcquirerBin": "新增 Acquirer BIN",
+      "acquirerBinList": {
+        "title": "Acquirer BIN 列表 - {acquirer}",
+        "th_acquirerBin": "Acquirer BIN",
+        "th_acquirerBinDelete": "Delete"
+      },
+      "dialog_addAcquirer": {
+        "title": "新增 3DS Server",
+        "label_acquirerName": "3DSS Operator 名稱",
+        "label_acquirer3dsRefNumber": "3DSS Reference Number",
+        "label_acquirer3dsOperatorId": "3DSS Operator ID"
+      },
+      "dialog_editAcquirer": {
+        "title": "修改 3DS Server",
+        "label_acquirerName": "3DSS Operator 名稱",
+        "label_acquirer3dsRefNumber": "3DSS Reference Number",
+        "label_acquirer3dsOperatorId": "3DSS Operator ID"
+      },
+      "dialog_addAcquirerBin": {
+        "title": "新增 Acquirer BIN",
+        "label_acquirerBin": "Acquirer BIN"
+      }
+    },
+    "acquirer_3dsSdk": {
+      "description": "建立及管理收單行提供的 3DS SDK 資料",
+      "btn_createSdk": "建立 SDK",
+      "sdkList": {
+        "title": "3DS SDK 列表",
+        "th_sdkRefNumber": "SDK Reference Number",
+        "th_delete": "刪除"
+      },
+      "dialog_add3dsSdk": {
+        "title": "新增 3DS SDK",
+        "label_sdkRefNumber": "SDK Reference Number"
+      }
+    },
+    "account_userManage": {
+      "description": "建立及管理使用者帳號與個人基本資料",
+      "btn_createUser": "建立使用者",
+      "label_accountSearch": "使用者帳號搜尋",
+      "userList": {
+        "title": "使用者列表",
+        "th_userAccount": "使用者帳號",
+        "th_userName": "使用者姓名",
+        "th_roleGroup": "所屬群組",
+        "th_edit": "編輯",
+        "th_delete": "刪除"
+      },
+      "dialog_editUser": {
+        "title_create": "建立使用者",
+        "title_edit": "修改使用者",
+        "title_optionalItem": "選填項目：",
+        "label_userAccount": "使用者帳號",
+        "label_userName": "使用者姓名",
+        "label_group": "所屬群組",
+        "label_departmentCategory": "部門類別",
+        "label_phone": "電話號碼",
+        "label_extension": "分機",
+        "label_email": "電子郵件",
+        "hint_group": "請先至「@:(menu.account.sub.groupPermission)」功能新增群組",
+        "prompt": "請確認「電子郵件」填寫無誤，並至郵箱收取Email，點選郵件內連結以設定密碼"
+      }
+    },
+    "account_groupPermission": {
+      "description": "建立及管理使用者角色群組及權限設定",
+      "btn_createRoleGroup": "建立群組",
+      "btn_addMemberList": "新增成員",
+      "roleGroupList": {
+        "title": "群組列表",
+        "th_groupName": "群組名稱",
+        "th_member": "成員",
+        "th_setting": "權限設定",
+        "th_delete": "刪除"
+      },
+      "memberList": {
+        "title": "成員列表 - ",
+        "th_userAccount": "使用者帳號",
+        "th_userName": "使用者姓名",
+        "th_remove": "移除"
+      },
+      "permissionSetting": {
+        "title": "權限設定 - ",
+        "switch_view": "檢視",
+        "switch_edit": "編輯"
+      },
+      "dialog_addMemberList": {
+        "title_add": "新增成員",
+        "prompt": "請先至「@:(menu.account.sub.userManage)」功能新增欲新增成員的使用者帳號",
+        "label_userAccount": "使用者帳號"
+      },
+      "dialog_editRoleGroup": {
+        "title_create": "建立群組",
+        "title_edit": "修改群組",
+        "label_groupName": "群組名稱"
+      }
+    },
+    "account_userUnLock": {
+      "description": "使用者帳號被鎖定時，可使用此功能進行解鎖",
+      "unLockList": {
+        "th_userAccount": "使用者帳號",
+        "th_userName": "使用者姓名",
+        "th_reason": "原因",
+        "th_unlock": "解鎖",
+        "btn_unlock": "點擊解鎖"
+      }
+    },
+    "account_passwordPrinciple": {
+      "description": "設定 Portal 人員登入密碼安全原則",
+      "setting": {
+        "title_setting": "密碼原則設定",
+        "title_characterRules": "密碼字元數限制",
+        "prompt": "密碼格式需包含數字、大小寫英文字母、特殊字元",
+        "label_loginRetryCount": "允許登入失敗嘗試次數",
+        "label_updateFrequency": "密碼更新頻率",
+        "label_maxUnusedPeriod": "最長未使用期間",
+        "label_minDuplicate": "最少密碼重複使用週期",
+        "label_minCharacters": "最少字元數",
+        "label_maxCharacters": "最多字元數",
+        "label_minEnglishCharacters": "最少英文字元數",
+        "label_minEnglishUppercase": "最少大寫英文字元數",
+        "label_minEnglishLowercase": "最少小寫英文字元數",
+        "label_minNumeric": "最少數值字元數",
+        "label_minSpecialChar": "最少特殊符號字元數",
+        "suffix_loginRetryCount": "次 | 次 | 次",
+        "suffix_updateFrequency": "天 | 天 | 天",
+        "suffix_maxUnusedPeriod": "天 | 天 | 天",
+        "suffix_minDuplicate": "代 | 代 | 代",
+        "warning_characterQty": "密碼細項字元數總和為 {count} ，已超過「最多字元數」，請重新確認"
+      }
+    },
+    "account_auditLog": {
+      "description": "追蹤人員管理的使用者頁面操作及訪問記錄",
+      "prompt": "設置搜尋條件並點擊搜尋",
+      "query": {
+        "label_userAccount": "使用者帳號",
+        "label_ipAddress": "IP 位址",
+        "label_action": "執行動作",
+        "label_status": "狀態",
+        "label_errorCode": "錯誤碼",
+        "selection_success": "成功 (Y)",
+        "selection_fail": "失敗 (N)",
+        "selection_timeout": "逾時 (T)"
+      },
+      "auditLog": {
+        "th_userAccount": "使用者帳號",
+        "th_ipAddress": "IP 位址",
+        "th_datetime": "時間",
+        "th_action": "執行動作",
+        "th_status": "狀態",
+        "th_errorCode": "錯誤碼",
+        "td_success": "成功 (Y)",
+        "td_fail": "失敗 (N)",
+        "td_timeout": "逾時 (T)"
+      }
+    },
+    "systemSetting_binRange": {
+      "description": "新增及管理 BIN Range",
+      "title_3dsVersion": "選擇 3DS 版本",
+      "radio_3ds20": "2.0",
+      "radio_3ds10": "1.0",
+      "btn_addBinRange": "新增 BIN Range",
+      "binRangeList": {
+        "th_binRangeStart": "BIN Range 起始",
+        "th_binRangeEnd": "BIN Range 結束",
+        "th_edit": "編輯",
+        "th_delete": "刪除"
+      },
+      "dialog_addBinRange": {
+        "title_add": "新增 BIN Range",
+        "title_edit": "修改 BIN Range",
+        "label_binRangeStart": "BIN Range 起始",
+        "label_binRangeEnd": "BIN Range 結束",
+        "hint_binRangeStart": "長度限制13到19個數字",
+        "hint_binRangeEnd": "長度限制13到19個數字",
+        "warning_startGreaterThanEnd": "起始值不可大於結束值"
+      }
+    },
+    "systemSetting_general": {
+      "description": "設定逾時時間與其他系統參數",
+      "prompt": "請點擊右側「編輯」按鈕以進行修改",
+      "title_preqResendInterval": "PReq 重送間隔",
+      "title_connectionTimeout": "Connection Timeout",
+      "title_readTimeout": "Read Timeout",
+      "label_preqResendInterval": "PReq 重送間隔",
+      "label_areqConnectionTimeout": "AReq 逾時時間",
+      "label_areqReadTimeout": "AReq 逾時時間",
+      "label_rreqConnectionTimeout": "RReq 逾時時間",
+      "label_rreqReadTimeout": "RReq 逾時時間",
+      "suffix_second": "秒 | 秒 | 秒",
+      "suffix_minute": "分 | 分 | 分"
+    },
+    "systemSetting_mcc": {
+      "description": "管理 MCC 列表",
+      "btn_uploadMccList": "匯入 MCC",
+      "mccList": {
+        "title": "MCC 列表",
+        "th_mccCode": "MCC"
+      },
+      "dialog_importMccList": {
+        "title": "匯入 MCC 列表",
+        "hint_upload": "接受的檔案格式：.csv",
+        "prompt": "新上傳檔案將全面覆蓋現行資料"
+      }
+    },
+    "certificate_ca": {
+      "subTitle": "(DS TLS Client)",
+      "description": "匯入 DS CA 憑證",
+      "certificateList": {
+        "title": "憑證列表",
+        "th_institution": "簽署機構",
+        "th_expiryDate": "憑證到期日",
+        "th_information": "憑證資訊",
+        "th_delete": "刪除"
+      },
+      "dialog_import": {
+        "title": "匯入 CA 憑證",
+        "hint_import": "接受的檔案格式：.pem, .cer, .crt, .der, .p7b, .p7c"
+      }
+    },
+    "certificate_deviceInfo": {
+      "description": "用以解密 SDK 裝置資訊加密資料",
+      "prompt_bank": "3DS 2.0 在系統安裝的 Signing 憑證資訊",
+      "status_set": "已設定",
+      "status_unset": "尚未設定完成",
+      "btn_changeCertificate": "切換憑證",
+      "btn_uploadCertificate": "上傳憑證",
+      "btn_createCsr": "產生CSR",
+      "setting": {
+        "title": "憑證設定",
+        "th_certificateName": "憑證名稱",
+        "th_content": "內容",
+        "th_effectiveDate": "憑證生效日",
+        "th_expiryDate": "憑證到期日",
+        "th_information": "憑證資訊",
+        "th_institution": "簽署機構",
+        "certificate": "Device Info 憑證",
+        "rootCaCertificate": "Device Info Root CA 憑證",
+        "subCaCertificate": "Device Info Sub CA 憑證",
+        "td_noCertificate": "尚無憑證"
+      },
+      "dialog_uploadCertificate": {
+        "title": "上傳憑證",
+        "hint_upload": "接受的檔案格式：.pem, .cer, .crt, .der, .p7b, .p7c"
+      },
+      "dialog_createCsr": {
+        "title": "CSR 的 Distinguished Name (DN)",
+        "label_country": "C - Country",
+        "label_organization": "O - Organization",
+        "label_organizationUnit": "OU - Organization Unit",
+        "label_commonName": "CN - Common Name",
+        "label_locality": "L - Locality",
+        "label_stateOrProvince": "ST - State or Province",
+        "placeholder_country": "TW",
+        "placeholder_organization": "Cherri Tech, Inc.",
+        "placeholder_organizationUnit": "Ocean Team",
+        "placeholder_commonName": "acs.v3dsts.cherricrop.com",
+        "placeholder_locality": "Taipei",
+        "placeholder_stateOrProvince": "Taiwan R.O.C",
+        "hint_country": "Two-letter ISO Country Code",
+        "hint_locality": "City. Do not abbreviate"
+      },
+      "dialog_changeCertificate": {
+        "title": "切換 Device Info 憑證",
+        "th_createDate": "憑證建立日",
+        "th_uploadDate": "憑證上傳日",
+        "th_expiryDate": "憑證到期日"
+      }
+    },
+    "certificate_ssl": {
+      "subTitle": "(DS TLS Client)",
+      "description": "SSL 憑證適用於與 ACS, 3DS Server 建立安全連線",
+      "prompt": "在系統安裝的客戶端憑證資訊",
+      "status_success": "已設定",
+      "status_unset": "尚未設定",
+      "status_renew": "等待更新",
+      "status_expire": "已過期",
+      "btn_changeCertificate": "切換憑證",
+      "setting": {
+        "title": "3DS 2.0 憑證",
+        "th_effectiveDate": "憑證生效日",
+        "th_information": "憑證資訊",
+        "th_institution": "憑證簽署機構",
+        "th_expiryDate": "憑證到期日",
+        "td_noCertificate": "尚無憑證"
+      },
+      "createCertificate": {
+        "title": "創建 3DS 2.0 憑證",
+        "description": "在 Portal 上產生 SSL 金鑰以及 CSR，以和組織申請憑證。",
+        "title_generate": "產生 SSL 金鑰及 CSR",
+        "title_uploadCertificate": "上傳憑證",
+        "btn_generate": "產生 SSL 金鑰",
+        "btn_delete": "刪除 SSL 金鑰",
+        "btn_uploadCertificate": "上傳憑證"
+      },
+      "updateCertificate": {
+        "title": "更新憑證",
+        "description": "在 Portal 上產生CSR，以和組織申請憑證。",
+        "title_generateCSR": "產生 CSR",
+        "title_uploadCertificate": "上傳憑證",
+        "btn_generateCSR": "產生 CSR",
+        "btn_uploadCertificate": "上傳憑證"
+      },
+      "dialog_uploadCertificate": {
+        "title": "上傳憑證",
+        "hint_upload": "接受的檔案格式：.pem, .cer, .crt, .der, .p7b, .p7c"
+      },
+      "dialog_downloadCertificate": {
+        "title": "下載憑證",
+        "label_password": "密碼"
+      },
+      "dialog_changeCertificate": {
+        "title": "切換 SSL 憑證",
+        "th_createDate": "憑證建立日",
+        "th_uploadDate": "憑證上傳日",
+        "th_expiryDate": "憑證到期日"
+      }
+    }
+  },
+  "sweet_alert": {
+    "button": {
+      "confirmButtonText": "確認",
+      "cancelButtonText": "取消"
+    },
+    "alertServerError": {
+      "title": "伺服器異常",
+      "text": "請稍後重整頁面，或洽管理員"
+    },
+    "alertNoAnyPermission": {
+      "html": "您無權限查看任何頁面, 請洽管理員"
+    },
+    "alertNoPermission": {
+      "html": "您沒有權限操作此功能"
+    },
+    "alertNeedQueryPermission": {
+      "title": "沒有執行權限",
+      "text": "欲開啟此項目，需有檢視權限"
+    },
+    "confirmLoginExpiring": {
+      "title": "延長登入時間確認",
+      "text": "您的登入時間即將結束，請確認是否需延長時間"
+    },
+    "alertLoggedOut": {
+      "html": "已經登出,請您再重新登入"
+    },
+    "alertLoginAgain": {
+      "html": "系統異常,請您再重新登入"
+    },
+    "alertSendComplete": {
+      "title": "完成",
+      "text": "執行成功"
+    },
+    "alertExecuteFail": {
+      "title": "執行失敗",
+      "text": "請重新確認，或洽管理員"
+    },
+    "confirmDelete": {
+      "title": "刪除確認",
+      "text": "刪除後將無法進行復原"
+    },
+    "confirmRemove": {
+      "title": "移除確認",
+      "text": "請確認是否從列表中移除此項目"
+    },
+    "confirmLeavePage": {
+      "title": "確認是否要離開此頁面",
+      "text": "若未按下儲存, 更改的資料將不保留"
+    },
+    "alertPasswordChanged": {
+      "title": "執行成功",
+      "text": "密碼已變更,請您再重新登入"
+    },
+    "alertValidateFailed": {
+      "title": "欄位資料有誤",
+      "text": "請確認填入欄位資訊是否正確"
+    },
+    "alertValidateFailedOrCancel": {
+      "title": "欄位資料有誤",
+      "text": "請確認填入欄位資訊是否正確，或按「取消」回到原設定"
+    },
+    "alertExportOverLimit": {
+      "title": "超過匯出筆數限制",
+      "html": "最多匯出筆數為<span class='primary--text px-1 num-style'>1000</span>筆,請重新篩選"
+    },
+    "confirmMemberWillNoGroup": {
+      "title": "刪除確認",
+      "html": "確認後以下使用者將不屬於任何群組，即無法進行登入:<br/><b>{userAccounts}</b>"
+    },
+    "confirmClose3DSecure": {
+      "title": "關閉3DS驗證功能",
+      "text": "請確認是否要關閉3DS驗證功能"
+    },
+    "confirmOpen3DSecure": {
+      "title": "開啟3DS驗證功能",
+      "text": "請確認是否要開啟3DS驗證功能"
+    },
+    "confirmCloseAllOtpSending": {
+      "title": "全部關閉確認",
+      "text": "未選擇任何發送方式，請確認是否全部關閉"
+    },
+    "confirmNoDeviceId": {
+      "title": "交易無裝置ID",
+      "text": "若無裝置ID資訊，該紀錄將不會加入至裝置ID黑名單中。請確認是否仍要送出"
+    },
+    "confirmAccountUnlock": {
+      "title": "解鎖確認",
+      "text": "請確認是否要解鎖此使用者帳號"
+    }
+  },
+  "api_response": {
+    "dataStatus": {
+      "101": "參數有誤",
+      "102": "不支援的內容",
+      "201": "必要資料為空",
+      "202": "無效的資料提供",
+      "203": "資料格式有誤",
+      "204": "資料已存在",
+      "303": "存取資料拒絕",
+      "401": "未經授權的請求",
+      "403": "沒有功能操作權限",
+      "404": "查無資料",
+      "502": "連線逾時",
+      "503": "讀取時間逾時",
+      "504": "連線失敗",
+      "505": "無效的參數",
+      "506": "無效的 URL",
+      "507": "驗證碼與金鑰不吻合",
+      "508": "無效的檔案大小",
+      "509": "無效的金鑰",
+      "510": "無效的金鑰長度",
+      "800": "資料庫寫入錯誤",
+      "801": "資料庫讀取錯誤",
+      "802": "檔案讀取錯誤",
+      "803": "檔案寫入錯誤",
+      "901": "Integrator 連線錯誤",
+      "902": "Integrator 回應錯誤",
+      "903": "Kernel 連線錯誤",
+      "904": "Kernel 回應錯誤",
+      "5000": "伺服器錯誤",
+      "5001": "無法識別",
+      "5002": "IO 錯誤",
+      "5003": "使用到系統保留字",
+      "5005": "資料處理異常",
+      "5101": "檔案名稱長度不合法",
+      "5102": "批次檔案名稱欄位長度不合法",
+      "5103": "無效的卡號格式：{pans}",
+      "5104": "非此銀行卡號：{pans}",
+      "5105": "找不到 BinRange，請先完成 BinRange 設定",
+      "5106": "檔案內容超過一萬筆",
+      "5107": "該卡號不在 BinRange 中",
+      "6000": "審核狀態未啟用",
+      "6202": "密碼需符合密碼原則",
+      "6203": "現行密碼輸入有誤",
+      "6204": "連結已失效",
+      "6301": "尚未註冊 Google Authenticator App",
+      "6302": "MFA 驗證碼有誤",
+      "6400": "帳號已鎖定",
+      "6401": "使用者必須至少屬於一個群組",
+      "6500": "無效的憑證",
+      "6501": "超過 CA 憑證限制數量",
+      "7000": "加密失敗",
+      "800X": "伺服器內部錯誤",
+      "99999": "未知的系統錯誤"
+    },
+    "httpError": {
+      "400": "[HTTP 400] 用戶端請求錯誤",
+      "401": "[HTTP 401] 需要授權以回應請求",
+      "403": "[HTTP 403] 用戶端並無訪問權限",
+      "404": "[HTTP 404] 找不到請求的資源",
+      "405": "[HTTP 405] 該請求方法已禁用",
+      "500": "[HTTP 500] 伺服器內部錯誤",
+      "503": "[HTTP 503] 伺服器暫停服務",
+      "504": "[HTTP 504] 伺服器服務逾時未回應",
+      "other": "[HTTP {status}] 連接錯誤"
+    },
+    "noResponseData": "未知的回應資料",
+    "noResponse": "伺服器異常未回應",
+    "requestError": "伺服器發生非預期的錯誤"
+  }
+}

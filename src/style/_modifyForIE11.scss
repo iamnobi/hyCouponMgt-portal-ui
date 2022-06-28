@@ -1,0 +1,36 @@
+// for IE10/IE11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .application--wrap {
+    width: 100%;
+  }
+  .v-content__wrap {
+    width: 100%;
+  }
+
+  .flex.table-width-expand {
+    width: 100%;
+  }
+
+  .flex.table-width-expand table {
+    table-layout: fixed;
+  }
+
+  .v-input__control input::placeholder {
+    //color: transparent !important;
+    font-size: 15px;
+  }
+
+  .v-navigation-drawer > :not(.v-list–dense).v-list .v-list__tile {
+    height: auto;
+    line-height: 48px;
+    vertical-align: middle;
+  }
+
+  .v-table__overflow {
+    table {
+      thead {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

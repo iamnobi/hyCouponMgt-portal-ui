@@ -1,0 +1,879 @@
+{
+  "menu": {
+    "canSeePan": {
+      "title": "View Plain PAN",
+      "module": {
+        "canSeePan": "@:(menu.canSeePan.title)"
+      }
+    },
+    "dashboard": {
+      "title": "Statistic Report",
+      "module": {
+        "report": "@:(menu.dashboard.title)"
+      }
+    },
+    "transaction": {
+      "title": "Transaction",
+      "sub": {
+        "records": "Transaction Records",
+        "preqRecords": "PReq Records"
+      },
+      "module": {
+        "records": "@:(menu.transaction.title)｜@:(menu.transaction.sub.records)、@:(menu.transaction.sub.preqRecords)"
+      }
+    },
+    "acquirer": {
+      "title": "3DS Server",
+      "sub": {
+        "acquirerManage": "3DS Server Management",
+        "3dsSdk": "3DS SDK Setting"
+      },
+      "module": {
+        "acquirer": "@:(menu.acquirer.title)｜@:(menu.acquirer.sub.acquirerManage)、@:(menu.acquirer.sub.3dsSdk)"
+      }
+    },
+    "issuer": {
+      "title": "Issuer Bank",
+      "sub": {
+        "issuerManage": "Issuer Management"
+      },
+      "module": {
+        "issuerManage": "@:(menu.issuer.title)｜@:(menu.issuer.sub.issuerManage)"
+      }
+    },
+    "account": {
+      "title": "Account Management",
+      "sub": {
+        "groupPermission": "Group Permission Setting",
+        "userManage": "User Management",
+        "userUnLock": "Unlock User",
+        "passwordPrinciple": "Password Principle",
+        "auditLog": "Audit Log"
+      },
+      "module": {
+        "userManage": "@:(menu.account.title)｜@:(menu.account.sub.groupPermission)、@:(menu.account.sub.userManage)",
+        "userUnLock": "@:(menu.account.title)｜@:(menu.account.sub.userUnLock)",
+        "passwordPrinciple": "@:(menu.account.title)｜@:(menu.account.sub.passwordPrinciple)",
+        "auditLog": "@:(menu.account.title)｜@:(menu.account.sub.auditLog)"
+      }
+    },
+    "systemSetting": {
+      "title": "System Setting",
+      "sub": {
+        "binRange": "BIN Range Management",
+        "general": "General Settings",
+        "mcc": "MCC Management"
+      },
+      "module": {
+        "binRange": "@:(menu.systemSetting.title)｜@:(menu.systemSetting.sub.binRange)",
+        "general": "@:(menu.systemSetting.title)｜@:(menu.systemSetting.sub.general)、@:(menu.systemSetting.sub.mcc)"
+      }
+    },
+    "certificate": {
+      "title": "Certificate Management",
+      "sub": {
+        "ca": "CA Certificate",
+        "deviceInfo": "Device Info Certificate",
+        "ssl": "SSL Certificate"
+      },
+      "module": {
+        "certificate": "@:(menu.certificate.title)｜@:(menu.certificate.sub.ca)、@:(menu.certificate.sub.deviceInfo)、@:(menu.certificate.sub.ssl)"
+      }
+    },
+    "login": {
+      "title": "Login"
+    },
+    "logout": {
+      "title": "Logout"
+    },
+    "other": {
+      "title": "Others",
+      "get_permission": "Get User Permission",
+      "no_permission": "No Access Permission",
+      "permissionException": "Permission Exception"
+    }
+  },
+  "common": {
+    "btn": {
+      "query": "Search",
+      "reset": "Reset",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "upload": "Upload",
+      "download": "Download",
+      "import": "Import",
+      "exportOnly": "Export",
+      "exportSelect": "Export Selected",
+      "exportSelect_item": "Item | Item | Items",
+      "exportAll": "Export All",
+      "close": "Close",
+      "back": "Back"
+    },
+    "file": {
+      "label_uploadFile": "Choose File",
+      "hint_uploadFile": "Please choose file to upload",
+      "noFile": "No File Chosen"
+    },
+    "table": {
+      "inquire": {
+        "prefix": "Total",
+        "infix": ", selected",
+        "results": "result | result | results"
+      },
+      "timeRange": {
+        "prefix": "Time range:",
+        "infix": "to",
+        "pastTime": "Past",
+        "currentTime": "Current"
+      },
+      "noData": "No Item Found"
+    },
+    "query": {
+      "bank": {
+        "title_bank": "Choose Financial Institution",
+        "label_bank": "Bank Name",
+        "label_institution": "Institution Name",
+        "hint_selectOneBank": "Please choose a Bank",
+        "value_allBanks": "All Banks",
+        "value_organization": "Organization"
+      },
+      "acquirerBank": {
+        "title_bank": "Choose 3DSS Operator",
+        "label_bank": "3DSS Operator",
+        "hint_selectOneBank": "Please choose a 3DSS Operator",
+        "value_allBanks": "All 3DSS Operators"
+      },
+      "timeRange": {
+        "title_timeRange": "Set Time Range",
+        "label_timeRange": "Start Date Time - End Date Time",
+        "hint_endOutOfRange": "End date time must follow the start date time",
+        "shortcuts_today": "Today",
+        "shortcuts_yesterday": "Yesterday",
+        "shortcuts_thisWeek": "This Week",
+        "shortcuts_lastWeek": "Last Week",
+        "shortcuts_thisMonth": "This Month",
+        "shortcuts_lastMonth": "Last Month"
+      },
+      "advanceSearch_show": "Show Advanced Search",
+      "advanceSearch_hide": "Hide Advanced Search"
+    }
+  },
+  "toolbar": {
+    "system": "DS",
+    "timeLeft": "Login Time Remaining",
+    "tip_loginExtend": "Click to extend login time",
+    "personalSetting": {
+      "title": "Personal Setting",
+      "selection_profile": "Profile",
+      "selection_changePassword": "Change Password",
+      "selection_logout": "Logout",
+      "language": {
+        "title": "Language"
+      },
+      "dialog_profile": {
+        "title": "Profile",
+        "title_optionalItem": "Optional Item:",
+        "label_userAccount": "User Account",
+        "label_userName": "User Name",
+        "label_email": "Email",
+        "label_departmentCategory": "Department Category",
+        "label_phone": "Phone",
+        "label_extension": "Extension"
+      },
+      "dialog_passwordChange": {
+        "title": "Change Password",
+        "label_currentPassword": "Old Password",
+        "label_newPassword": "New Password",
+        "label_retypeNewPassword": "Retype New Password",
+        "warning": "You need to update your password to keep your account safe",
+        "prompt_title": "Password must follow these principles",
+        "prompt_minDuplicate": " | , and not reuse previous one | , and not reused {min} cycles",
+        "note_characters": "Password length must be between {min} and {max}",
+        "note_englishCharacters": "At least {min} English characters (at least {uppercase} uppercase and {lowercase} lowercase letters)",
+        "note_numeric": "At least {min} numeric characters",
+        "note_specialChar": "At least {min} special symbols"
+      }
+    }
+  },
+  "page": {
+    "login": {
+      "title": "Login",
+      "subtitle": "DS System",
+      "rightsStatement": "Cherri Tech, Inc. | All rights reserved",
+      "suggestion": "Better browsing experience with Google Chrome 86 or any higher version",
+      "form": {
+        "label_userAccount": "User Account",
+        "label_password": "Password",
+        "btn_login": "Login",
+        "btn_forgetPassword": "Forget Password?",
+        "error_locked": "Account is locked, please contact the administrator",
+        "error_loginFailed": "Incorrect Account or Password",
+        "error_noOwnGroup": "Permission denied. Current user does not belong to any group, please contact the administrator",
+        "error_recaptchaTokenInvalid": "Google reCAPTCHA V2 verification failed, please try again later or please check your connection to www.google.com"
+      },
+      "dialog_mfa": {
+        "title": "Multi-Factor Authentication (MFA)",
+        "description": "To improve security, we must further verify your identity",
+        "label_authenticationCode": "Authentication Code",
+        "hint_authenticationCode": "The OTP authentication code has been sent to your Email",
+        "btn_resend": "Resend",
+        "prompt": "If you did not receive the OTP authentication code, please click \"RESEND\" button"
+      },
+      "dialog_forgetPassword": {
+        "title": "Forget Password",
+        "description": "Please enter your user account to reset password.",
+        "label_bankCode": "Bank Code",
+        "label_userAccount": "User Account",
+        "prompt": "Please check your Email and click on the link provided to set account password"
+      },
+      "dialog_passwordSetting": {
+        "title": "Setting Password",
+        "label_newPassword": "New Password",
+        "label_retypeNewPassword": "Retype New Password",
+        "prompt_title": "Password must follow these principles",
+        "prompt_minDuplicate": " | , and not reuse previous one | , and not reused {min} cycles",
+        "note_characters": "Password length must be between {min} and {max}",
+        "note_englishCharacters": "At least {min} English characters (at least {uppercase} uppercase and {lowercase} lowercase letters)",
+        "note_numeric": "At least {min} numeric characters",
+        "note_specialChar": "At least {min} special symbols"
+      }
+    },
+    "noPermission": {
+      "message": "No permission to view this page"
+    },
+    "dashboard_report": {
+      "description": "Transaction statistic reports",
+      "prompt": "Please enter your criteria and click search",
+      "query": {
+        "title_timeRange": "Set Time Range",
+        "radio_daily": "Daily Report",
+        "radio_monthly": "Monthly Report",
+        "label_timeRange_daily": "Date",
+        "label_timeRange_monthly": "Month",
+        "hint_timeRange": "Please set time range"
+      },
+      "daily": "Daily Report: ",
+      "monthly": "Monthly Report: ",
+      "transactionStatic": {
+        "title": "Transaction Status Statistic Report",
+        "formula_description": "3DS 2.0 Calculation Formula:",
+        "formula1": "N-Rate = [(ARes=N or R) + (RReq=N or R)] / [(ARes=Y+N+A+U+R) + (RReq=Y+N+A+U+R)]",
+        "formula2": "U-Rate = [(ARes=U) + (RReq=U)] / [(ARes=Y+N+A+U+R) + (RReq=Y+N+A+U+R)]",
+        "th_bank": "Bank Name",
+        "th_totalQty": "Total Transaction Volume",
+        "th_statusY": "Transaction Succeed (Y)",
+        "th_statusN": "Transaction Failed (N)",
+        "th_reject": "Transaction Rejected (R)",
+        "th_exception": "System Exception (U)",
+        "th_uRate": "U-Rate",
+        "th_nRate": "N-Rate",
+        "tip_statusY": "ARes = Y or RReq = Y",
+        "tip_statusN": "ARes = N or RReq = N",
+        "tip_reject": "ARes = R",
+        "tip_abnormal": "ARes = U"
+      }
+    },
+    "transaction_records": {
+      "description": "3-D Secure authentication, forged transaction records",
+      "prompt": "Please enter your criteria and click search",
+      "query": {
+        "title_timeRange": "Set Time Range",
+        "title_pan": "Enter PAN",
+        "label_startDatetime": "Start Date Time",
+        "label_endDatetime": "End Date Time",
+        "label_pan": "PAN",
+        "label_ares": "ARes",
+        "label_rres": "RRes",
+        "label_pares": "PARes",
+        "label_3dsServerTransID": "threeDSServerTransID",
+        "label_acsTransID": "acsTransID",
+        "label_dsTransID": "dsTransID",
+        "label_sdkTransID": "sdkTransID",
+        "caption": "When querying with any transaction ID below, the fields above will be ignored"
+      },
+      "3ds2Result": "Searched 3DS 2.0 Result ({count})",
+      "records": {
+        "th_authenticationDate": "Authentication Date",
+        "th_institutionName": "Institution Name",
+        "th_AcqBin": "Acquirer BIN",
+        "th_pan": "PAN",
+        "th_amount": "Amount",
+        "th_currency": "Currency",
+        "th_transactionResult": "Transaction Result",
+        "th_areqResult": "AReq Result"
+      },
+      "3ds2Records": {
+        "title": "3DS 2.0 ",
+        "td_ares": "(ares: {status})",
+        "td_rres": "(rres: {status})",
+        "td_result_success": "Success",
+        "td_result_fail": "Fail"
+      },
+      "recordsExtend": {
+        "btn_transDetail": "Details",
+        "th_none": "(No Data)",
+        "th_cardholderIp": "Cardholder IP",
+        "th_purchaseTime": "Purchase Time",
+        "th_merchantName": "Merchant Name",
+        "th_merchantCountryCode": "Merchant Country Code",
+        "th_challengeChannel": "Authentication Channel",
+        "th_deviceChannel": "Device Channel",
+        "th_ares": "ARes",
+        "th_rres": "RRes",
+        "th_encryptPan": "Encrypted PAN",
+        "th_challengeResult": "Challenge Result",
+        "th_createMillis": "Transaction Millis(ms)",
+        "th_userAgent": "User-Agent",
+        "th_rbaDescription": "RBA Description"
+      },
+      "dialog_recordDetail": {
+        "description": "View detailed transaction record",
+        "table_title": "Detail Of Transaction Info",
+        "th_none": "(No Data)"
+      }
+    },
+    "transaction_preqRecords": {
+      "description": "Preparation Request Message (PReq) records",
+      "prompt": "Please enter your criteria and click search",
+      "query": {
+        "title_timeRange": "Set Time Range",
+        "label_startDatetime": "Start Date Time",
+        "label_endDatetime": "End Date Time"
+      },
+      "records": {
+        "th_preq": "PReq",
+        "th_pres": "PRes",
+        "th_3dssOperatorId": "3DS Server Operator ID",
+        "th_3dssEmvRefNumber": "3DS Server EMV Reference Number",
+        "th_3dssTransId": "3DS Server Trans ID",
+        "th_datetime": "Date Time",
+        "th_dsTransId": "DS Trans ID",
+        "th_serialNumber": "Serial Number",
+        "th_errorMsg": "Error Message",
+        "tip_errorMsg": "PRes replies error"
+      }
+    },
+    "issuer_issuerManage": {
+      "description": "Setting and creating issuer banks",
+      "btn_createIssuer": "Create Issuer",
+      "issuerList": {
+        "title": "Issuer Bank List",
+        "th_issuerName": "Issuer Name",
+        "th_issuerCode": "Issuer Code",
+        "th_issuerAcsRefNumber": "ACS Reference Number",
+        "th_issuerAcsOperatorId": "ACS Operator ID",
+        "th_issuerEdit": "Edit",
+        "th_issuerDelete": "Delete"
+      },
+      "dialog_addIssuer": {
+        "title": "Add Issuer Bank",
+        "label_issuerName": "Issuer Name",
+        "label_issuerCode": "Issuer Code",
+        "label_issuer3dsUrl": "3DS Method URL",
+        "label_issuerAcsUrl": "ACS URL",
+        "label_issuerAcsRefNumber": "ACS Reference Number",
+        "label_issuerAcsOperatorId": "ACS Operator ID"
+      },
+      "dialog_editIssuer": {
+        "title": "Edit Issuer Bank",
+        "label_issuerName": "Issuer Name",
+        "label_issuerCode": "Issuer Code",
+        "label_issuer3dsUrl": "3DS Method URL",
+        "label_issuerAcsUrl": "ACS URL",
+        "label_issuerAcsRefNumber": "ACS Reference Number",
+        "label_issuerAcsOperatorId": "ACS Operator ID"
+      }
+    },
+    "acquirer_acquirerManage": {
+      "description": "Setting and creating 3DS Server",
+      "btn_createAcquirer": "Create 3DS Server",
+      "acquirerList": {
+        "title": "3DS Server List",
+        "th_acquirerName": "3DSS Operator Name",
+        "th_acquirer3dsRefNumber": "3DSS Reference Number",
+        "th_acquirer3dsOperatorID": "3DSS Operator ID",
+        "th_acquirerBins": "Acquirer BINs",
+        "th_acquirerEdit": "Edit",
+        "th_acquirerDelete": "Delete"
+      },
+      "btn_addAcquirerBin": "Add Acquirer BIN",
+      "acquirerBinList": {
+        "title": "Acquirer BIN List - {acquirer}",
+        "th_acquirerBin": "Acquirer BIN",
+        "th_acquirerBinDelete": "Delete"
+      },
+      "dialog_addAcquirer": {
+        "title": "Add 3DS Server",
+        "label_acquirerName": "3DSS Operator Name",
+        "label_acquirer3dsRefNumber": "3DSS Reference Number",
+        "label_acquirer3dsOperatorId": "3DSS Operator ID"
+      },
+      "dialog_editAcquirer": {
+        "title": "Edit 3DS Server",
+        "label_acquirerName": "3DSS Operator Name",
+        "label_acquirer3dsRefNumber": "3DSS Reference Number",
+        "label_acquirer3dsOperatorId": "3DSS Operator ID"
+      },
+      "dialog_addAcquirerBin": {
+        "title": "Add Acquirer BIN",
+        "label_acquirerBin": "Acquirer BIN"
+      }
+    },
+    "acquirer_3dsSdk": {
+      "description": "Setting and creating 3DS SDK Info from Acquirer",
+      "btn_createSdk": "Create SDK",
+      "sdkList": {
+        "title": "3DS SDK List",
+        "th_sdkRefNumber": "SDK Reference Number",
+        "th_delete": "Delete"
+      },
+      "dialog_add3dsSdk": {
+        "title": "Add 3DS SDK",
+        "label_sdkRefNumber": "SDK Reference Number"
+      }
+    },
+    "account_userManage": {
+      "description": "Create and manage user account and personal information",
+      "btn_createUser": "Create User",
+      "label_accountSearch": "Search Account",
+      "userList": {
+        "title": "User List",
+        "th_userAccount": "User Account",
+        "th_userName": "User Name",
+        "th_roleGroup": "Group",
+        "th_edit": "Edit",
+        "th_delete": "Delete"
+      },
+      "dialog_editUser": {
+        "title_create": "Create User",
+        "title_edit": "Edit User",
+        "title_optionalItem": "Optional Item:",
+        "label_userAccount": "User Account",
+        "label_userName": "User Name",
+        "label_group": "Group",
+        "label_departmentCategory": "Department Category",
+        "label_phone": "Phone",
+        "label_extension": "Extension",
+        "label_email": "Email",
+        "hint_group": "Please go to \"@:(menu.account.sub.groupPermission)\" page to create group first",
+        "prompt": "Please confirm that the \"Email\" is entered correctly to receive Email. You can click on the link provided to set account password"
+      }
+    },
+    "account_groupPermission": {
+      "description": "Create and manage user group and Permission",
+      "btn_createRoleGroup": "Create Group",
+      "btn_addMemberList": "Add Member",
+      "roleGroupList": {
+        "title": "Group List",
+        "th_groupName": "Group Name",
+        "th_member": "Member",
+        "th_setting": "Permission Setting",
+        "th_delete": "Delete"
+      },
+      "memberList": {
+        "title": "Member List - ",
+        "th_userAccount": "User Account",
+        "th_userName": "User Name",
+        "th_remove": "Remove"
+      },
+      "permissionSetting": {
+        "title": "Permission Setting - ",
+        "switch_view": "View",
+        "switch_edit": "Edit"
+      },
+      "dialog_addMemberList": {
+        "title_add": "Add Member",
+        "prompt": "Please go to \"@:(menu.account.sub.userManage)\" page to create user account first",
+        "label_userAccount": "User Account"
+      },
+      "dialog_editRoleGroup": {
+        "title_create": "Create Group",
+        "title_edit": "Edit Group",
+        "label_groupName": "Group Name"
+      }
+    },
+    "account_userUnLock": {
+      "description": "Use this function to unlock when user account is locked",
+      "unLockList": {
+        "th_userAccount": "User Account",
+        "th_userName": "User Name",
+        "th_reason": "Cause",
+        "th_unlock": "Unlock",
+        "btn_unlock": "Unlock"
+      }
+    },
+    "account_passwordPrinciple": {
+      "description": "Setting of portal users' login password security principles",
+      "setting": {
+        "title_setting": "Password Principle Setting",
+        "title_characterRules": "Character Rules",
+        "prompt": "Password must contain digits, uppercase and lowercase letters, special symbols",
+        "label_loginRetryCount": "Maximum Unsuccessful Attempts",
+        "label_updateFrequency": "Password Update Frequency",
+        "label_maxUnusedPeriod": "Maximum unused period",
+        "label_minDuplicate": "Minimum Password Reuse Cycle",
+        "label_minCharacters": "Minimum Number Of Characters",
+        "label_maxCharacters": "Maximum Number Of Characters",
+        "label_minEnglishCharacters": "Minimum Number Of English Characters",
+        "label_minEnglishUppercase": "Minimum Number Of Uppercase Letters",
+        "label_minEnglishLowercase": "Minimum Number Of Lowercase Letters",
+        "label_minNumeric": "Minimum Number Of Numeric Characters",
+        "label_minSpecialChar": "Minimum Number Of Special Symbols",
+        "suffix_loginRetryCount": "time | time | times",
+        "suffix_updateFrequency": "day | day | days",
+        "suffix_maxUnusedPeriod": "day | day | days",
+        "suffix_minDuplicate": "generation | generation | generations",
+        "warning_characterQty": "The total number of password chracters is {count}, which has exceeds \"Maximum Number Of Characters\" rules. Please reconfirm"
+      }
+    },
+    "account_auditLog": {
+      "description": "Track user operations and access logs",
+      "prompt": "Please enter your criteria and click search",
+      "query": {
+        "label_userAccount": "User Account",
+        "label_ipAddress": "IP Address",
+        "label_action": "Action",
+        "label_status": "Status",
+        "label_errorCode": "Error Code",
+        "selection_success": "Success (Y)",
+        "selection_fail": "Fail (N)",
+        "selection_timeout": "Timeout (T)"
+      },
+      "auditLog": {
+        "th_userAccount": "User Account",
+        "th_ipAddress": "IP Address",
+        "th_datetime": "Date Time",
+        "th_action": "Action",
+        "th_status": "Status",
+        "th_errorCode": "Error Code",
+        "td_success": "Success (Y)",
+        "td_fail": "Fail (N)",
+        "td_timeout": "Timeout (T)"
+      }
+    },
+    "systemSetting_binRange": {
+      "description": "Add and manage BIN Pange",
+      "title_3dsVersion": "Choose 3DS Version",
+      "radio_3ds20": "2.0",
+      "radio_3ds10": "1.0",
+      "btn_addBinRange": "Add BIN Range",
+      "binRangeList": {
+        "th_binRangeStart": "Start of BIN Range",
+        "th_binRangeEnd": "End of BIN Range",
+        "th_edit": "Edit",
+        "th_delete": "Delete"
+      },
+      "dialog_addBinRange": {
+        "title_add": "Add BIN Range",
+        "title_edit": "Edit BIN Range",
+        "label_binRangeStart": "Start of BIN Range",
+        "label_binRangeEnd": "End of BIN Range",
+        "hint_binRangeStart": "Length Limitation: 13-19 digits.",
+        "hint_binRangeEnd": "Length Limitation: 13-19 digits.",
+        "warning_startGreaterThanEnd": "The start value cannot be greater than the end value"
+      }
+    },
+    "systemSetting_general": {
+      "description": "Edit timeout and other system settings",
+      "prompt": "Please click right side \"EDIT\" button to edit",
+      "title_preqResendInterval": "PReq Resend Interval",
+      "title_connectionTimeout": "Connection Timeout",
+      "title_readTimeout": "Read Timeout",
+      "label_preqResendInterval": "PReq Resend Interval",
+      "label_areqConnectionTimeout": "AReq Timeout",
+      "label_areqReadTimeout": "AReq Timeout",
+      "label_rreqConnectionTimeout": "RReq Timeout",
+      "label_rreqReadTimeout": "RReq Timeout",
+      "suffix_second": "second | second | seconds",
+      "suffix_minute": "minute | minute | minutes"
+    },
+    "systemSetting_mcc": {
+      "description": "Manage MCC list",
+      "btn_uploadMccList": "Import MCC",
+      "mccList": {
+        "title": "MCC List",
+        "th_mccCode": "MCC"
+      },
+      "dialog_importMccList": {
+        "title": "Upload MCC list",
+        "hint_upload": "File Type: .csv",
+        "prompt": "Existing data will be completely replaced by new uploading file"
+      }
+    },
+    "certificate_ca": {
+      "subTitle": "(DS TLS Client)",
+      "description": "Import DS CA Certificate",
+      "certificateList": {
+        "title": "Certificate List",
+        "th_institution": "Signing Institution",
+        "th_expiryDate": "Expiry Date",
+        "th_information": "Certificate Information",
+        "th_delete": "Delete"
+      },
+      "dialog_import": {
+        "title": "Import CA Certificate",
+        "hint_import": "File Type: .pem, .cer, .crt, .der, .p7b, .p7c"
+      }
+    },
+    "certificate_deviceInfo": {
+      "description": "Used to decrypt the encrypted data of SDK Device Info",
+      "prompt_bank": "Signing certificate installed in the systme in 3DS 2.0",
+      "status_set": "Setting Completed",
+      "status_unset": "Setting Not Completed",
+      "btn_changeCertificate": "Change Certificate",
+      "btn_uploadCertificate": "Upload Certificate",
+      "btn_createCsr": "Create CSR",
+      "setting": {
+        "title": "Certificate Setting",
+        "th_certificateName": "Certificate Name",
+        "th_content": "Content",
+        "th_effectiveDate": "Effective Date",
+        "th_expiryDate": "Expiry Date",
+        "th_information": "Certificate Information",
+        "th_institution": "Signing Institution",
+        "certificate": "Device Info Certificate",
+        "rootCaCertificate": "Device Info Root CA Certificate",
+        "subCaCertificate": "Device Info Sub CA Certificate",
+        "td_noCertificate": "No Certificate"
+      },
+      "dialog_uploadCertificate": {
+        "title": "Upload Certificate",
+        "hint_upload": "File Type: .pem, .cer, .crt, .der, .p7b, .p7c"
+      },
+      "dialog_createCsr": {
+        "title": "CSR's Distinguished Name (DN)",
+        "label_country": "C - Country",
+        "label_organization": "O - Organization",
+        "label_organizationUnit": "OU - Organization Unit",
+        "label_commonName": "CN - Common Name",
+        "label_locality": "L - Locality",
+        "label_stateOrProvince": "ST - State or Province",
+        "placeholder_country": "TW",
+        "placeholder_organization": "Cherri Tech, Inc.",
+        "placeholder_organizationUnit": "Ocean Team",
+        "placeholder_commonName": "acs.v3dsts.cherricrop.com",
+        "placeholder_locality": "Taipei",
+        "placeholder_stateOrProvince": "Taiwan R.O.C",
+        "hint_country": "Two-letter ISO Country Code",
+        "hint_locality": "City. Do not abbreviate"
+      },
+      "dialog_changeCertificate": {
+        "title": "Change Device Info Certificate",
+        "th_createDate": "Create Date",
+        "th_uploadDate": "Upload Date",
+        "th_expiryDate": "Expiry Date"
+      }
+    },
+    "certificate_ssl": {
+      "subTitle": "(DS TLS Client)",
+      "description": "The SSL certificate is used for establishing a secure connection with Acs and 3DS Server",
+      "prompt": "Certificate information in client which installed in the system",
+      "status_success": "Set",
+      "status_unset": "Not Yet Set",
+      "status_renew": "Waiting for Renewal",
+      "status_expire": "Expired",
+      "btn_changeCertificate": "Change Certificate",
+      "setting": {
+        "title": "3DS 2.0 Certificate",
+        "th_effectiveDate": "Effective Date",
+        "th_information": "Certificate Information",
+        "th_institution": "Signing Institution",
+        "th_expiryDate": "Expiry Date",
+        "td_noCertificate": "No Certificate"
+      },
+      "createCertificate": {
+        "title": "Create 3DS 2.0 Certificate",
+        "description": "Generate SSL Key and CSR on the portal for applying certificate with card schemes",
+        "title_generate": "Generate SSL Key and CSR",
+        "title_uploadCertificate": "Upload Certificate",
+        "btn_generate": "Generate SSL Key",
+        "btn_delete": "Delete SSL Key",
+        "btn_uploadCertificate": "Upload Certificate"
+      },
+      "updateCertificate": {
+        "title": "Update Certificate",
+        "description": "Generate CSR on the portal for applying certificate",
+        "title_generateCSR": "Generate CSR",
+        "title_uploadCertificate": "Upload Certificate",
+        "btn_generateCSR": "Generate CSR",
+        "btn_uploadCertificate": "Upload Certificate"
+      },
+      "dialog_uploadCertificate": {
+        "title": "Upload Certificate",
+        "hint_upload": "File Type: .pem, .cer, .crt, .der, .p7b, .p7c"
+      },
+      "dialog_downloadCertificate": {
+        "title": "Download Certificate",
+        "label_password": "Password"
+      },
+      "dialog_changeCertificate": {
+        "title": "Change SSL Certificate",
+        "th_createDate": "Create Date",
+        "th_uploadDate": "Upload Date",
+        "th_expiryDate": "Expiry Date"
+      }
+    }
+  },
+  "sweet_alert": {
+    "button": {
+      "confirmButtonText": "Confirm",
+      "cancelButtonText": "Cancel"
+    },
+    "alertServerError": {
+      "title": "Server Exception",
+      "text": "Please refresh page or contact the administrator"
+    },
+    "alertNoAnyPermission": {
+      "html": "No permission to view any page, please contact the administrator"
+    },
+    "alertNoPermission": {
+      "html": "No permission to operate this function"
+    },
+    "alertNeedQueryPermission": {
+      "title": "No Execution Permission",
+      "text": "Need view permission to open this item"
+    },
+    "confirmLoginExpiring": {
+      "title": "Login Time Expire Confirm",
+      "text": "Login time is about to expire, please confirm whether the need to extend the time"
+    },
+    "alertLoggedOut": {
+      "html": "Logged out, please login again"
+    },
+    "alertLoginAgain": {
+      "html": "System abnormal, please login again"
+    },
+    "alertSendComplete": {
+      "title": "Complete",
+      "text": "Execution Succeed"
+    },
+    "alertExecuteFail": {
+      "title": "Execution Failed",
+      "text": "Please check again or contact the administrator"
+    },
+    "confirmDelete": {
+      "title": "Confirm to Delete",
+      "text": "Cannot be restored after deletion"
+    },
+    "confirmRemove": {
+      "title": "Confirm to Remove",
+      "text": "Please check whether to remove this item from list"
+    },
+    "confirmLeavePage": {
+      "title": "Confirm To Leave This Page",
+      "text": "Revised data will not be stored without clicking \"SAVE\" button"
+    },
+    "alertPasswordChanged": {
+      "title": "Execution succeed",
+      "text": "Password changed, please login again"
+    },
+    "alertValidateFailed": {
+      "title": "Incorrect Field Data",
+      "text": "Please confirm whether the filled field data is correct"
+    },
+    "alertValidateFailedOrCancel": {
+      "title": "Incorrect Field Data",
+      "text": "Please confirm whether the filled field data is correct, or click \"CANCEL\" button to resume settings"
+    },
+    "alertExportOverLimit": {
+      "title": "Limitation of Exportion Exceeded",
+      "html": "Maximum Exportion: <span class='primary--text px-1 num-style'>1000</span> Items. Please reset criteria"
+    },
+    "confirmMemberWillNoGroup": {
+      "title": "Confirm To Delete",
+      "html": "Following users no longer belong to any group after confirmation, which will cause the users login failed:<br/><b>{userAccounts}</b>"
+    },
+    "confirmClose3DSecure": {
+      "title": "Disable 3DS Authentication",
+      "text": "Please confirm whether to disable 3DS Authentication"
+    },
+    "confirmOpen3DSecure": {
+      "title": "Enable 3DS Authentication",
+      "text": "Please confirm whether to enable 3DS Authentication"
+    },
+    "confirmCloseAllOtpSending": {
+      "title": "Confirm To Disable All",
+      "text": "No sending method selected, please check whether to disable all"
+    },
+    "confirmNoDeviceId": {
+      "title": "Transaction Without Device ID",
+      "text": "Transaction without device ID will not be added into device ID blocklist. Please confirm to send"
+    },
+    "confirmAccountUnlock": {
+      "title": "Confirm To Unlock",
+      "text": "Please confirm to unlock the user account"
+    }
+  },
+  "api_response": {
+    "dataStatus": {
+      "101": "Incorrect Parameters",
+      "102": "Unsupported Content",
+      "201": "Required Information Blank",
+      "202": "Invalid Provided Information",
+      "203": "Incorrect Data Format",
+      "204": "Data Existed",
+      "303": "Access Data Denied",
+      "401": "Unauthorized Request",
+      "403": "Forbidden Operation",
+      "404": "Data Not Found",
+      "502": "Connection Timeout",
+      "503": "Read Timeout",
+      "504": "Connection Failed",
+      "505": "Invalid Parameters",
+      "506": "Invalid URL",
+      "507": "The Authentication Code Does Not Match The Key",
+      "508": "Invalid File Size",
+      "509": "Invalid Key",
+      "510": "Invalid Key Length",
+      "800": "Database Write Error",
+      "801": "Database Read Error",
+      "802": "File Read Error",
+      "803": "File Write Error",
+      "901": "Integrator Connection Error",
+      "902": "Integrator Response Error",
+      "903": "Kernel Connection Error",
+      "904": "Kernel Response Error",
+      "5000": "Server Exception",
+      "5001": "Unrecognition",
+      "5002": "IO Error",
+      "5003": "System Reserved Words Used",
+      "5005": "Data Processing Abnormality",
+      "5101": "Invalid File Name Length",
+      "5102": "Invalid Batch File Name Field Length",
+      "5103": "Invalid PAN Format: {pans}",
+      "5104": "PAN Mismatch The Bank: {pans}",
+      "5105": "BinRange Not Found, please complete BinRange setting first",
+      "5106": "More Than 10,000 Items in File",
+      "5107": "The PAN is not in BinRange",
+      "6000": "Reviewal Status is Not Enabled",
+      "6202": "Password must follow Password Principles",
+      "6203": "Incorrect Old Password",
+      "6204": "The link is expired",
+      "6301": "Unregistered Google Authenticator App",
+      "6302": "Incorrect MFA Authentication Code",
+      "6400": "Account is locked",
+      "6401": "User must belong to at least one group",
+      "6500": "Invalid Certificate",
+      "6501": "The uploaded CA Certificate quantity exceeds limit",
+      "7000": "Encryption Failed",
+      "800X": "Server Internal Error",
+      "99999": "Unknown System Error"
+    },
+    "httpError": {
+      "400": "[HTTP 400] Bad Request",
+      "401": "[HTTP 401] Unauthorized",
+      "403": "[HTTP 403] Forbidden",
+      "404": "[HTTP 404] Not Found",
+      "405": "[HTTP 405] Method Not Allowed",
+      "500": "[HTTP 500] Server Internal Error",
+      "503": "[HTTP 503] Service Unavailable",
+      "504": "[HTTP 504] Gateway Timeout",
+      "other": "[HTTP {status}] Connection Failed"
+    },
+    "noResponseData": "Unknown Response Data",
+    "noResponse": "Server Exception. No Response",
+    "requestError": "Unexpected Server Error"
+  }
+}
